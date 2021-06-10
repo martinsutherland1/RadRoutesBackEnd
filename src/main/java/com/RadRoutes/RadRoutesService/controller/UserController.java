@@ -30,22 +30,22 @@ public class UserController {
     }
 
     // POST
-    @PostMapping(value = "/user")
-    public ResponseEntity<User> userPark(@RequestBody User user){
+    @PostMapping(value = "/users")
+    public ResponseEntity<User> postUser(@RequestBody User user){
         userRepository.save(user);
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
     // UPDATE
     @PatchMapping(value = "/users/{id}")
-    public ResponseEntity<User> updatePark(@PathVariable User user){
+    public ResponseEntity<User> updateUser(@PathVariable User user){
         userRepository.save(user);
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
     //DELETE
     @DeleteMapping(value = "/users/{id}")
-    public ResponseEntity<User> deletePirate(@PathVariable Long id) {
+    public ResponseEntity<User> deleteUser(@PathVariable Long id) {
         User found = userRepository.getById(id);
         userRepository.delete(found);
         return new ResponseEntity<>(null, HttpStatus.OK);

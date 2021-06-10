@@ -35,15 +35,15 @@ public class ParkController {
     }
 
     // UPDATE
-    @PatchMapping(value = "/park/{id}")
+    @PatchMapping(value = "/parks/{id}")
     public ResponseEntity<Park> updatePark(@PathVariable Park park){
         parkRepository.save(park);
         return new ResponseEntity<>(park, HttpStatus.OK);
     }
 
     //DELETE
-    @DeleteMapping(value = "/PARKS/{id}")
-    public ResponseEntity<Park> deletePirate(@PathVariable Long id) {
+    @DeleteMapping(value = "/parks/{id}")
+    public ResponseEntity<Park> deletePark(@PathVariable Long id) {
         Park found = parkRepository.getById(id);
         parkRepository.delete(found);
         return new ResponseEntity<>(null, HttpStatus.OK);
