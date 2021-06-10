@@ -1,5 +1,6 @@
 package com.RadRoutes.RadRoutesService.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -32,11 +33,19 @@ public class Route {
     private int rating;
 
 
+//    @JsonBackReference
     @JsonIgnoreProperties(value = "route")
     @ManyToOne
     @JoinColumn(name = "park_id", nullable = false)
     private Park park;
 
+    @JsonIgnoreProperties(value = "route")
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @JsonIgnoreProperties(value="route")
+    @OneToMany(mappedBy="route", fetch=FetchType.LAZY)
     private List<Coordinate> routePoints;
 
     public Route(String routeName, double distance, double duration, double elevationChange, String difficulty, int rating, Park park) {
@@ -47,9 +56,6 @@ public class Route {
         this.difficulty = difficulty;
         this.rating = rating;
         this.park = park;
-
-
-
         this.routePoints = new ArrayList<>();
     }
 

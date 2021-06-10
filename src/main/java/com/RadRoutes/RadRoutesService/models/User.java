@@ -14,7 +14,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+    private Long id;
 
     @Column(name = "first_name")
     private String firstName;
@@ -51,7 +51,6 @@ public class User {
         this.sex = sex;
         this.distanceTarget = distanceTarget;
         this.alias = alias;
-
         this.allRoutes = new ArrayList<>();
     }
 
