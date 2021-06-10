@@ -121,4 +121,8 @@ public class User {
     public void setAlias(String alias) {
         this.alias = alias;
     }
+
+    public void addRoute(Route route){
+        this.allRoutes.add(route);
+    }
 }

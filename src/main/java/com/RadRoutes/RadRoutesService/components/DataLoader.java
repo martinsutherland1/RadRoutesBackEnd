@@ -3,6 +3,7 @@ package com.RadRoutes.RadRoutesService.components;
 import com.RadRoutes.RadRoutesService.models.Coordinate;
 import com.RadRoutes.RadRoutesService.models.Park;
 import com.RadRoutes.RadRoutesService.models.Route;
+import com.RadRoutes.RadRoutesService.models.User;
 import com.RadRoutes.RadRoutesService.repository.CoordinateRepository;
 import com.RadRoutes.RadRoutesService.repository.ParkRepository;
 import com.RadRoutes.RadRoutesService.repository.RouteRepository;
@@ -72,6 +73,14 @@ public class DataLoader implements ApplicationRunner {
         test1.addCoordinate(one4);
         test1.addCoordinate(one5);
         routeRepository.save(test1);
+
+        // USER CREATED
+        User testUser1 = new User("Martin", "Sutherland", 31, "martin@email.co.uk", "male", 100.00, "Tino");
+        userRepository.save(testUser1);
+        testUser1.addRoute(test1);
+
+
+
 
 
 
