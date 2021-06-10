@@ -1,26 +1,46 @@
 package com.RadRoutes.RadRoutesService.models;
 
-import java.util.ArrayList;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+
+@Entity
+@Table(name = "parks")
 public class Park {
 
-    private String name;
-    private ArrayList<Route> allRoutes;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    public Park(String name) {
-        this.name = name;
+    @Column(name = "park_name")
+    private String parkName;
+
+    @JsonIgnoreProperties(value = "parks")
+    @OneToMany(mappedBy = "park", fetch = FetchType.LAZY)
+    private List<Route> allRoutes;
+
+    public Park(String parkName) {
+        this.parkName = parkName;
         this.allRoutes = new ArrayList<>();
     }
 
+
+    public Park() {
+    }
+
+
     public String getName() {
-        return name;
+        return parkName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.parkName = parkName;
     }
 
-    public ArrayList<Route> getAllRoutes() {
+    public List<Route> getAllRoutes() {
         return allRoutes;
     }
 
