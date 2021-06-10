@@ -18,35 +18,65 @@ public class Park {
     @Column(name = "park_name")
     private String parkName;
 
+    @Column(name = "longitude")
+    private double longitude;
+
+    @Column(name = "latitude")
+    private double latitude;
+
     @JsonIgnoreProperties(value = "park")
     @OneToMany(mappedBy = "park", fetch = FetchType.LAZY)
     private List<Route> allRoutes;
 
-    public Park(String parkName) {
+    public Park(String parkName, double longitude, double latitude) {
         this.parkName = parkName;
+        this.longitude = longitude;
+        this.latitude = latitude;
         this.allRoutes = new ArrayList<>();
-    }
 
+    }
 
     public Park() {
     }
 
 
-    public String getName() {
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getParkName() {
         return parkName;
     }
 
-    public void setName(String name) {
+    public void setParkName(String parkName) {
         this.parkName = parkName;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
     }
 
     public List<Route> getAllRoutes() {
         return allRoutes;
     }
 
-    public void setAllRoutes(ArrayList<Route> allRoutes) {
+    public void setAllRoutes(List<Route> allRoutes) {
         this.allRoutes = allRoutes;
     }
-
-
 }

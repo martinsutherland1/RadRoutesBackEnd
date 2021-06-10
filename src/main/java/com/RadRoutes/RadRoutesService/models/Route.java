@@ -3,6 +3,7 @@ package com.RadRoutes.RadRoutesService.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 @Entity
 @Table(name = "routes")
@@ -38,13 +39,18 @@ public class Route {
 
     private List<Coordinate> routePoints;
 
-    public Route(String routeName, double distance, double duration, double elevationChange, String difficulty, int rating) {
+    public Route(String routeName, double distance, double duration, double elevationChange, String difficulty, int rating, Park park) {
         this.routeName = routeName;
         this.distance = distance;
         this.duration = duration;
         this.elevationChange = elevationChange;
         this.difficulty = difficulty;
         this.rating = rating;
+        this.park = park;
+
+
+
+        this.routePoints = new ArrayList<>();
     }
 
     public Route() {
@@ -112,5 +118,9 @@ public class Route {
 
     public void setPark(Park park) {
         this.park = park;
+    }
+
+    public void addCoordinate(Coordinate coordinate) {
+        this.routePoints.add(coordinate);
     }
 }
