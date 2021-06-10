@@ -18,7 +18,7 @@ public class Park {
     @Column(name = "park_name")
     private String parkName;
 
-    @JsonIgnoreProperties(value = "parks")
+    @JsonIgnoreProperties(value = "park")
     @OneToMany(mappedBy = "park", fetch = FetchType.LAZY)
     private List<Route> allRoutes;
 

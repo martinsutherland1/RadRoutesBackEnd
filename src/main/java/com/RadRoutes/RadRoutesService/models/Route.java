@@ -31,7 +31,7 @@ public class Route {
     private int rating;
 
 
-    @JsonIgnoreProperties(value = "routes")
+    @JsonIgnoreProperties(value = "route")
     @ManyToOne
     @JoinColumn(name = "park_id", nullable = false)
     private Park park;

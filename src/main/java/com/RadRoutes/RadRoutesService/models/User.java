@@ -1,5 +1,7 @@
 package com.RadRoutes.RadRoutesService.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,36 +9,61 @@ import java.util.List;
 
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
 
-
+    @Column(name = "first_name")
     private String firstName;
+
+    @Column(name = "last_name")
     private String lastName;
-    private String email;
-    private String sex;
+
+    @Column(name = "age")
     private int age;
+
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "sex")
+    private String sex;
+
+    @Column(name = "distance_target")
     private double distanceTarget;
+
+    @Column(name = "alias")
     private String alias;
 
 
+    @JsonIgnoreProperties(value = "user")
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Route> allRoutes;
 
 
-    public User(String firstName, String lastName, String email, String sex, int age, double distanceTarget, String alias) {
+    public User(String firstName, String lastName, int age, String email, String sex, double distanceTarget, String alias) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.age = age;
         this.email = email;
         this.sex = sex;
-        this.age = age;
         this.distanceTarget = distanceTarget;
         this.alias = alias;
 
         this.allRoutes = new ArrayList<>();
+    }
+
+    public List<Route> getAllRoutes() {
+        return allRoutes;
+    }
+
+    public void setAllRoutes(List<Route> allRoutes) {
+        this.allRoutes = allRoutes;
+    }
+
+    public User() {
     }
 
     public String getFirstName() {

@@ -23,7 +23,7 @@ public class Coordinate {
     @Column(name = "altitude")
     private double altitude;
 
-    @JsonIgnoreProperties(value = "coordinates")
+    @JsonIgnoreProperties(value = "coordinate")
     @ManyToOne
     @JoinColumn(name = "route_id", nullable = false)
     private Route route;
