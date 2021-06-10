@@ -1,35 +1,69 @@
 package com.RadRoutes.RadRoutesService.models;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import javax.persistence.*;
+import java.util.List;
+@Entity
+@Table(name = "routes")
 public class Route {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    private String name;
+    @Column(name = "route_name")
+    private String routeName;
+
+    @Column(name = "distance")
     private double distance;
-    private double time;
+
+    @Column(name = "duration")
+    private double duration;
+
+    @Column(name = "elevation_change")
     private double elevationChange;
+
+    @Column(name = "difficulty")
     private String difficulty;
+
+    @Column(name = "rating")
     private int rating;
+
+
+    @JsonIgnoreProperties(value = "routes")
+    @ManyToOne
+    @JoinColumn(name = "park_id", nullable = false)
+    private Park park;
+
     private List<Coordinate> routePoints;
 
-    public Route(String name, double distance, double time, double elevationChange, String difficulty, int rating) {
-        this.name = name;
+    public Route(String routeName, double distance, double duration, double elevationChange, String difficulty, int rating) {
+        this.routeName = routeName;
         this.distance = distance;
-        this.time = time;
+        this.duration = duration;
         this.elevationChange = elevationChange;
         this.difficulty = difficulty;
         this.rating = rating;
-
     }
 
-    public String getName() {
-        return name;
+    public Route() {
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getRouteName() {
+        return routeName;
+    }
+
+    public void setRouteName(String routeName) {
+        this.routeName = routeName;
     }
 
     public double getDistance() {
@@ -40,12 +74,12 @@ public class Route {
         this.distance = distance;
     }
 
-    public double getTime() {
-        return time;
+    public double getDuration() {
+        return duration;
     }
 
-    public void setTime(double time) {
-        this.time = time;
+    public void setDuration(double duration) {
+        this.duration = duration;
     }
 
     public double getElevationChange() {
@@ -72,7 +106,11 @@ public class Route {
         this.rating = rating;
     }
 
+    public Park getPark() {
+        return park;
+    }
 
-
-
+    public void setPark(Park park) {
+        this.park = park;
+    }
 }
