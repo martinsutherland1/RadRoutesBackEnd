@@ -79,4 +79,8 @@ public class Park {
     public void setAllRoutes(List<Route> allRoutes) {
         this.allRoutes = allRoutes;
     }
+
+    public int routeCount(){
+        return getAllRoutes().size();
+    }
 }
