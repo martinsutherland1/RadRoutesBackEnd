@@ -24,7 +24,7 @@ public class Park {
     @Column(name = "latitude")
     private double latitude;
 
-    @JsonIgnoreProperties(value = "park")
+    @JsonIgnoreProperties(value = "routePoints")
     @OneToMany(mappedBy = "park", fetch = FetchType.LAZY)
     private List<Route> allRoutes;
 

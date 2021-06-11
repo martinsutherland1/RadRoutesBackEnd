@@ -1,6 +1,7 @@
 package com.RadRoutes.RadRoutesService.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -39,7 +40,12 @@ public class User {
 
 
     @JsonIgnoreProperties(value = "user")
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    @ManyToMany
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @JoinTable(
+            joinColumns = {@JoinColumn(name = "user_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "route_id", nullable = false, updatable = false)}
+    )
     private List<Route> allRoutes;
 
 
@@ -54,6 +60,17 @@ public class User {
         this.allRoutes = new ArrayList<>();
     }
 
+    public User() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public List<Route> getAllRoutes() {
         return allRoutes;
     }
@@ -62,8 +79,7 @@ public class User {
         this.allRoutes = allRoutes;
     }
 
-    public User() {
-    }
+
 
     public String getFirstName() {
         return firstName;

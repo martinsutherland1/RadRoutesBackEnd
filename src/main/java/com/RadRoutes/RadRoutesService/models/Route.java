@@ -2,6 +2,7 @@ package com.RadRoutes.RadRoutesService.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -33,19 +34,25 @@ public class Route {
     private int rating;
 
 
-//    @JsonBackReference
-    @JsonIgnoreProperties(value = "route")
+
+    @JsonIgnoreProperties(value = "allRoutes")
     @ManyToOne
     @JoinColumn(name = "park_id", nullable = false)
     private Park park;
 
-    @JsonIgnoreProperties(value = "route")
+    @JsonIgnoreProperties(value = "allRoutes")
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
     @JsonIgnoreProperties(value="route")
-    @OneToMany(mappedBy="route", fetch=FetchType.LAZY)
+    @ManyToMany
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @JoinTable(
+            name = "users_routes",
+            joinColumns = {@JoinColumn(name = "route_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "user_id", nullable = false, updatable = false)}
+    )
     private List<Coordinate> routePoints;
 
     public Route(String routeName, double distance, double duration, double elevationChange, String difficulty, int rating, Park park) {
@@ -59,7 +66,25 @@ public class Route {
         this.routePoints = new ArrayList<>();
     }
 
+
+
     public Route() {
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public List<Coordinate> getRoutePoints() {
+        return routePoints;
+    }
+
+    public void setRoutePoints(List<Coordinate> routePoints) {
+        this.routePoints = routePoints;
     }
 
     public Long getId() {
