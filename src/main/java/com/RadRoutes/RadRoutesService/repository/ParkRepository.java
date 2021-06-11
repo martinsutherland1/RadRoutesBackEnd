@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 public interface ParkRepository extends JpaRepository<Park, Long> {
 
-    List<Park> findByParksId(long id);
+    List<Park> findParkById(long l);
 }
