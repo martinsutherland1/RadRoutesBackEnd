@@ -40,7 +40,7 @@ public class DataLoader implements ApplicationRunner {
 
         Park lochLomond = new Park("Loch Lomond", 56.33900, -4.38114);
         parkRepository.save(lochLomond);
-        Park cairngorms = new Park("Cairngorms", 56.33900, -4.38114);
+        Park cairngorms = new Park("Cairngorms", 57.07833, -3.64638);
         parkRepository.save(cairngorms);
 //
 //        // USER CREATED
