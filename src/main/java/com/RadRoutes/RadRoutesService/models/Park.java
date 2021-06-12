@@ -1,6 +1,6 @@
 package com.RadRoutes.RadRoutesService.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -24,7 +24,7 @@ public class Park {
     @Column(name = "latitude")
     private double latitude;
 
-    @JsonIgnoreProperties(value = "routePoints")
+    @JsonBackReference
     @OneToMany(mappedBy = "park", fetch = FetchType.LAZY)
     private List<Route> allRoutes;
 
