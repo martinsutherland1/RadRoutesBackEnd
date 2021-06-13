@@ -38,10 +38,31 @@ public class DataLoader implements ApplicationRunner {
 
         //        CREATE PARK
 
-        Park lochLomond = new Park("Loch Lomond", 56.33900, -4.38114);
+        Park lochLomond = new Park("Loch Lomond");
+
+        Park cairngorms = new Park("Cairngorms");
+
+
+
+        lochLomond.addPropertiesToRegion("longitudeDelta", 0.04);
+        lochLomond.addPropertiesToRegion("latitudeDelta", 0.09);
+        lochLomond.addPropertiesToRegion("longitude", 56.339);
+        lochLomond.addPropertiesToRegion("latitude", -4.381);
+
+
+
+
+
+        cairngorms.addPropertiesToRegion("longitudeDelta", 0.04);
+        cairngorms.addPropertiesToRegion("latitudeDelta", 0.09);
+        cairngorms.addPropertiesToRegion("longitude", 57.078);
+        cairngorms.addPropertiesToRegion("latitude", -3.646);
+
+
+
         parkRepository.save(lochLomond);
-        Park cairngorms = new Park("Cairngorms", 57.07833, -3.64638);
         parkRepository.save(cairngorms);
+
 //
 //        // USER CREATED
         User testUser1 = new User("Martin", "Sutherland", 31, "martin@email.co.uk", "male", 100.00, "Tino");

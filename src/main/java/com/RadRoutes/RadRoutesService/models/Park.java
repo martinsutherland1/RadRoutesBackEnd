@@ -3,6 +3,13 @@ package com.RadRoutes.RadRoutesService.models;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
+import java.util.HashMap;
+
+
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,7 +26,9 @@ public class Park {
     @Column(name = "park_name")
     private String parkName;
 
+
     @Column(name = "region")
+    @javax.persistence.Lob
     private HashMap<String, Double> region;
 
     @JsonBackReference

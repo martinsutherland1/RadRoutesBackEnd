@@ -43,7 +43,7 @@ class RadRoutesServiceApplicationTests {
 
 	@Test
 	public void canAddRouteToPark(){
-		Park lochLomond = new Park("Loch Lomond", 56.33900, -4.38114);
+		Park lochLomond = new Park("Loch Lomond");
 		parkRepository.save(lochLomond);
 		User testUser1 = new User("Martin", "Sutherland", 31, "martin@email.co.uk", "male", 100.00, "Tino");
 		userRepository.save(testUser1);
