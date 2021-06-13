@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -18,20 +19,16 @@ public class Park {
     @Column(name = "park_name")
     private String parkName;
 
-    @Column(name = "longitude")
-    private double longitude;
-
-    @Column(name = "latitude")
-    private double latitude;
+    @Column(name = "region")
+    private HashMap<String, Double> region;
 
     @JsonBackReference
     @OneToMany(mappedBy = "park", fetch = FetchType.LAZY)
     private List<Route> allRoutes;
 
-    public Park(String parkName, double longitude, double latitude) {
+    public Park(String parkName) {
         this.parkName = parkName;
-        this.longitude = longitude;
-        this.latitude = latitude;
+        this.region = new HashMap<String, Double>();
         this.allRoutes = new ArrayList<>();
 
     }
@@ -56,20 +53,12 @@ public class Park {
         this.parkName = parkName;
     }
 
-    public double getLongitude() {
-        return longitude;
+    public HashMap<String, Double> getRegion() {
+        return region;
     }
 
-    public void setLongitude(double longitude) {
-        this.longitude = longitude;
-    }
-
-    public double getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(double latitude) {
-        this.latitude = latitude;
+    public void setRegion(HashMap<String, Double> region) {
+        this.region = region;
     }
 
     public List<Route> getAllRoutes() {
@@ -82,5 +71,9 @@ public class Park {
 
     public int routeCount(){
         return getAllRoutes().size();
+    }
+
+    public void addPropertiesToRegion(String key, Double value){
+        region.put(key, value);
     }
 }
