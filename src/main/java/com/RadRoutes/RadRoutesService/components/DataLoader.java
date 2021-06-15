@@ -99,7 +99,7 @@ public class DataLoader implements ApplicationRunner {
         routeRepository.save(test7);
 
         Route test8 = new Route("Danger Zone",10.3,4.28,800, "Laaaaannnnaaa!", 5, cairngorms);
-        routeRepository.save(test8;
+        routeRepository.save(test8);
 
         Route test9 = new Route("Aviemore Loop",42.2,13.2,1495, "Why", 2, cairngorms);
         routeRepository.save(test9);
@@ -108,7 +108,7 @@ public class DataLoader implements ApplicationRunner {
         routeRepository.save(test10);
 
         Route test11 = new Route("Lochinthrob",1.7,0.15,0, "Saucy", 1, cairngorms);
-        routeRepository.save(test10);
+        routeRepository.save(test11);
 
 
 //        **COORDINATE CREATED**
@@ -391,7 +391,172 @@ public class DataLoader implements ApplicationRunner {
         test2.addCoordinate(two6);
         routeRepository.save(test2);
 
-        
+        //ROUTE 3
+
+        test3.addCoordinate(three1);
+        test3.addCoordinate(three2);
+        test3.addCoordinate(three3);
+        test3.addCoordinate(three4);
+        test3.addCoordinate(three5);
+        test3.addCoordinate(three6);
+        test3.addCoordinate(three7);
+        test3.addCoordinate(three8);
+        test3.addCoordinate(three9);
+        routeRepository.save(test3);
+
+//ROUTE 4
+
+        test4.addCoordinate(four1);
+        test4.addCoordinate(four2);
+        test4.addCoordinate(four3);
+        test4.addCoordinate(four4);
+        test4.addCoordinate(four5);
+        test4.addCoordinate(four6);
+        test4.addCoordinate(four7);
+        test4.addCoordinate(four8);
+        routeRepository.save(test4);
+
+//ROUTE 5
+
+        test5.addCoordinate(five1);
+        test5.addCoordinate(five2);
+        test5.addCoordinate(five3);
+        test5.addCoordinate(five4);
+        test5.addCoordinate(five5);
+        test5.addCoordinate(five6);
+        test5.addCoordinate(five7);
+        test5.addCoordinate(five8);
+        routeRepository.save(test5);
+
+//ROUTE 6
+
+        test6.addCoordinate(six1);
+        test6.addCoordinate(six2);
+        test6.addCoordinate(six3);
+        test6.addCoordinate(six4);
+        test6.addCoordinate(six5);
+        test6.addCoordinate(six6);
+        test6.addCoordinate(six7);
+        test6.addCoordinate(six8);
+        routeRepository.save(test6);
+
+//ROUTE 7
+
+        test7.addCoordinate(seven1);
+        test7.addCoordinate(seven2);
+        test7.addCoordinate(seven3);
+        test7.addCoordinate(seven4);
+        test7.addCoordinate(seven5);
+        test7.addCoordinate(seven6);
+        test7.addCoordinate(seven7);
+        test7.addCoordinate(seven8);
+        routeRepository.save(test7);
+
+
+
+//ROUTE 8
+
+        test8.addCoordinate(eight1);
+        test8.addCoordinate(eight2);
+        test8.addCoordinate(eight3);
+        test8.addCoordinate(eight4);
+        test8.addCoordinate(eight5);
+        test8.addCoordinate(eight6);
+        test8.addCoordinate(eight7);
+        routeRepository.save(test8);
+
+
+
+
+
+
+//ROUTE 9
+
+        test9.addCoordinate(nine1);
+        test9.addCoordinate(nine2);
+        test9.addCoordinate(nine3);
+        test9.addCoordinate(nine4);
+        test9.addCoordinate(nine5);
+        test9.addCoordinate(nine6);
+        test9.addCoordinate(nine7);
+        test9.addCoordinate(nine8);
+        test9.addCoordinate(nine9);
+        test9.addCoordinate(nine10);
+        test9.addCoordinate(nine11);
+        routeRepository.save(test9);
+
+
+
+
+
+
+
+
+//ROUTE 10
+
+        test10.addCoordinate(ten1);
+        test10.addCoordinate(ten2);
+        test10.addCoordinate(ten3);
+        test10.addCoordinate(ten4);
+        test10.addCoordinate(ten5);
+        test10.addCoordinate(ten6);
+        test10.addCoordinate(ten7);
+        routeRepository.save(test10);
+
+
+
+
+
+
+
+
+
+
+
+
+//ROUTE 11
+
+        test11.addCoordinate(eleven1);
+        test11.addCoordinate(eleven2);
+        test11.addCoordinate(eleven3);
+        test11.addCoordinate(eleven4);
+        test11.addCoordinate(eleven5);
+        test11.addCoordinate(eleven6);
+        test11.addCoordinate(eleven7);
+        test11.addCoordinate(eleven9);
+        test11.addCoordinate(eleven10);
+        test11.addCoordinate(eleven11);
+        test11.addCoordinate(eleven12);
+        test11.addCoordinate(eleven13);
+        test11.addCoordinate(eleven14);
+        test11.addCoordinate(eleven15);
+        test11.addCoordinate(eleven16);
+        test11.addCoordinate(eleven17);
+        test11.addCoordinate(eleven18);
+        test11.addCoordinate(eleven19);
+        test11.addCoordinate(eleven20);
+        test11.addCoordinate(eleven21);
+        test11.addCoordinate(eleven22);
+        test11.addCoordinate(eleven23);
+        test11.addCoordinate(eleven24);
+        test11.addCoordinate(eleven25);
+        test11.addCoordinate(eleven26);
+        test11.addCoordinate(eleven27);
+        routeRepository.save(test11);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
