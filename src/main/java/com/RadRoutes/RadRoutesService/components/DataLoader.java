@@ -107,6 +107,9 @@ public class DataLoader implements ApplicationRunner {
         Route test10 = new Route("K-B",58.21,24.05,3763.05, "EASAYYY!!!!", 5, cairngorms);
         routeRepository.save(test10);
 
+        Route test11 = new Route("Lochinthrob",1.7,0.15,0, "Saucy", 1, cairngorms);
+        routeRepository.save(test10);
+
 
 //        **COORDINATE CREATED**
 
