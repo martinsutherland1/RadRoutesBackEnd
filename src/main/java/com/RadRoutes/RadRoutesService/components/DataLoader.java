@@ -82,40 +82,40 @@ public class DataLoader implements ApplicationRunner {
 
 
 //        COORDINATE CREATED
-        Coordinate one1 = new Coordinate(-4.366389,56.340556,  228, test1);
+        Coordinate one1 = new Coordinate(-4.366389, 56.340556,  228, test1);
         coordinateRepository.save(one1);
 
-        Coordinate one2 = new Coordinate(-4.405278,56.320278,  314,test1);
+        Coordinate one2 = new Coordinate(-4.405278, 56.320278,  314,test1);
         coordinateRepository.save(one2);
 
-        Coordinate one3 = new Coordinate(-4.391667,56.287222, 250, test1);
+        Coordinate one3 = new Coordinate(-4.391667, 56.287222, 250, test1);
         coordinateRepository.save(one3);
 
         Coordinate one4 = new Coordinate(-4.351667, 56.2725, 358, test1);
         coordinateRepository.save(one4);
 
-        Coordinate one5= new Coordinate(-4.365833,56.3375,  268, test1);
+        Coordinate one5= new Coordinate(-4.365833, 56.3375,  268, test1);
         coordinateRepository.save(one5);
 
-        Coordinate one6 = new Coordinate(-4.365833,56.3375,  268, test1);
+        Coordinate one6 = new Coordinate(-4.365833, 56.3375,  268, test1);
         coordinateRepository.save(one6);
 
-        Coordinate two1 = new Coordinate(-4.366389,56.340556,  228, test2);
+        Coordinate two1 = new Coordinate(-4.366389, 56.340556,  228, test2);
         coordinateRepository.save(two1);
 
-        Coordinate two2 = new Coordinate(-4.405278,56.320278,  314,test2);
+        Coordinate two2 = new Coordinate(-4.405278, 56.320278,  314,test2);
         coordinateRepository.save(two2);
 
-        Coordinate two3 = new Coordinate(56.287222, -4.391667, 250, test2);
+        Coordinate two3 = new Coordinate(-4.391667, 56.287222,  250, test2);
         coordinateRepository.save(two3);
 
-        Coordinate two4 = new Coordinate(56.2725, -4.351667, 358, test2);
+        Coordinate two4 = new Coordinate(-4.351667, 56.2725, 358, test2);
         coordinateRepository.save(two4);
 
-        Coordinate two5= new Coordinate(56.3375, -4.365833, 268, test2);
+        Coordinate two5= new Coordinate(-4.365833, 56.3375,  268, test2);
         coordinateRepository.save(two5);
 
-        Coordinate two6 = new Coordinate(56.3375, -4.365833, 268, test2);
+        Coordinate two6 = new Coordinate(-4.365833, 56.3375,  268, test2);
         coordinateRepository.save(two6);
 
         ////        ROUTE CREATED
