@@ -52,11 +52,11 @@ public class DataLoader implements ApplicationRunner {
 
 
 
-
+        cairngorms.addPropertiesToRegion("latitude", -3.646);
         cairngorms.addPropertiesToRegion("longitudeDelta", 0.04);
         cairngorms.addPropertiesToRegion("latitudeDelta", 0.09);
         cairngorms.addPropertiesToRegion("longitude", 57.078);
-        cairngorms.addPropertiesToRegion("latitude", -3.646);
+
 
 
 
