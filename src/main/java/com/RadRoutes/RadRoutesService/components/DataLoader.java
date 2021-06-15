@@ -83,10 +83,29 @@ public class DataLoader implements ApplicationRunner {
 
 
 
-        Route test3 = new Route("Easy on the legs",17.28,7.006,1070.05, "easy", 4, cairngorms);
-        routeRepository.save(test2);
+        Route test3 = new Route("Alt Darroch",4.5,1.25,175, "easy", 3, cairngorms);
+        routeRepository.save(test3);
 
+        Route test4 = new Route("Beananidh Bheag",21.09,8.83,1352.00, "hard", 5, cairngorms);
+        routeRepository.save(test4);
 
+        Route test5 = new Route("Carn na Criche",17.1,6.8,835, "Roy Keane", 4, cairngorms);
+        routeRepository.save(test5);
+
+        Route test6 = new Route("Carn Laith",13.5,5.03,772, "ice cream", 3, cairngorms);
+        routeRepository.save(test6);
+
+        Route test7 = new Route("Burn of Loinherry",5.3,2.12,405, "easy", 3, cairngorms);
+        routeRepository.save(test7);
+
+        Route test8 = new Route("Danger Zone",10.3,4.28,800, "Laaaaannnnaaa!", 5, cairngorms);
+        routeRepository.save(test8;
+
+        Route test9 = new Route("Aviemore Loop",42.2,13.2,1495, "Why", 2, cairngorms);
+        routeRepository.save(test9);
+
+        Route test10 = new Route("K-B",58.21,24.05,3763.05, "EASAYYY!!!!", 5, cairngorms);
+        routeRepository.save(test10);
 
 
 //        **COORDINATE CREATED**
@@ -283,6 +302,61 @@ public class DataLoader implements ApplicationRunner {
         Coordinate ten7 = new Coordinate(-3.0683247, 57.0487755, 237.4 , test2);
         coordinateRepository.save(ten7);
 
+//COORDINATES FOR ROUTE LOCHINTHROB
+        Coordinate  eleven1 = new Coordinate( -3.7133309  ,57.4066481  ,  294.8  , test2);
+        coordinateRepository.save( eleven1);
+        Coordinate  eleven2 = new Coordinate( -3.7146613  ,57.4050761  ,  294.8  , test2);
+        coordinateRepository.save( eleven2);
+        Coordinate  eleven3 = new Coordinate( -3.7155625  ,57.4052610  ,  294.8  ,  test2);
+        coordinateRepository.save( eleven3);
+        Coordinate  eleven4 = new Coordinate( -3.7165925  ,57.4052610  ,  294.8  , test2);
+        coordinateRepository.save( eleven4);
+        Coordinate  eleven5 = new Coordinate( -3.7176224  ,57.4047987  ,  294.8  , test2);
+        coordinateRepository.save( eleven5);
+        Coordinate  eleven6 = new Coordinate( -3.7171933  ,57.4042901  ,  294.8  , test2);
+        coordinateRepository.save( eleven6);
+        Coordinate  eleven7 = new Coordinate( -3.7164208  ,57.4040820  ,  294.8  , test2);
+        coordinateRepository.save( eleven7);
+        Coordinate  eleven8 = new Coordinate( -3.7152192  ,57.4038739  ,  294.8  , test2);
+        coordinateRepository.save( eleven8);
+        Coordinate  eleven9 = new Coordinate( -3.7147042  ,57.4041745  ,  294.8   , test2);
+        coordinateRepository.save( eleven9);
+        Coordinate  eleven10 = new Coordinate(-3.7144467  ,57.4038970  ,  294.8   , test2);
+        coordinateRepository.save( eleven10);
+        Coordinate  eleven11 = new Coordinate(-3.7140605  ,57.4035271  ,  294.8  , test2);
+        coordinateRepository.save( eleven11);
+        Coordinate  eleven12 = new Coordinate(-3.7132451  ,57.4034347  ,  294.8  , test2);
+        coordinateRepository.save( eleven12);
+        Coordinate  eleven13 = new Coordinate(-3.7123009  ,57.4035271  ,  294.8  , test2);
+        coordinateRepository.save( eleven13);
+        Coordinate  eleven14 = new Coordinate(-3.7117859  ,57.4039433  ,  294.8  , test2);
+        coordinateRepository.save( eleven14);
+        Coordinate  eleven15 = new Coordinate(-3.7121722  ,57.4045213  ,  294.8  , test2);
+        coordinateRepository.save( eleven15);
+        Coordinate  eleven16 = new Coordinate(-3.7129876  ,57.4048680  ,  294.8  , test2);
+        coordinateRepository.save( eleven16);
+        Coordinate  eleven17 = new Coordinate(-3.7120005  ,57.4063938  ,  294.8  , test2);
+        coordinateRepository.save( eleven17);
+        Coordinate  eleven18 = new Coordinate(-3.7111422  ,57.4061626  ,  294.8  , test2);
+        coordinateRepository.save( eleven18);
+        Coordinate  eleven19 = new Coordinate(-3.7106906  ,57.4066236  ,  294.8  , test2);
+        coordinateRepository.save( eleven19);
+        Coordinate  eleven20 = new Coordinate(-3.7110124  ,57.4071900  ,  294.8   , test2);
+        coordinateRepository.save( eleven20);
+        Coordinate  eleven21 = new Coordinate(-3.7115060  ,57.4075714  ,  294.8  , test2);
+        coordinateRepository.save( eleven21);
+        Coordinate  eleven22 = new Coordinate(-3.7119566  ,57.4076985  ,  294.8  , test2);
+        coordinateRepository.save( eleven22);
+        Coordinate  eleven23 = new Coordinate(-3.7127720  ,57.4076985  ,  294.8  , test2);
+        coordinateRepository.save( eleven23);
+        Coordinate  eleven24 = new Coordinate(-3.7133942  ,57.4075830  ,  294.8  , test2);
+        coordinateRepository.save( eleven24);
+        Coordinate  eleven25 = new Coordinate(-3.7139521  ,57.4073171  ,  294.8  , test2);
+        coordinateRepository.save( eleven25);
+        Coordinate  eleven26 = new Coordinate(-3.7143384  ,57.4070166  ,  294.8  , test2);
+        coordinateRepository.save( eleven26);
+        Coordinate  eleven27 = new Coordinate(-3.7133728  ,57.4066583  ,  294.8  , test2);
+        coordinateRepository.save( eleven27);
 
 
 
@@ -314,17 +388,7 @@ public class DataLoader implements ApplicationRunner {
         test2.addCoordinate(two6);
         routeRepository.save(test2);
 
-
-
-
-
-
-
-
-
-
-
-
+        
 
 
 
