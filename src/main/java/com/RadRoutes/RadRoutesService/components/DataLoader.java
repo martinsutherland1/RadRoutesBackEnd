@@ -88,7 +88,7 @@ public class DataLoader implements ApplicationRunner {
         routeRepository.save(test2);
         testUser1.addRoute(test1);
         testUser1.addRoute(test2);
-        userRepository.save(testUser1);
+//        userRepository.save(testUser1);
 
 
 
@@ -96,15 +96,15 @@ public class DataLoader implements ApplicationRunner {
         routeRepository.save(test3);
         testUser3.addRoute(test3);
         testUser4.addRoute(test3);
-        userRepository.save(testUser3);
-        userRepository.save(testUser4);
+//        userRepository.save(testUser3);
+//        userRepository.save(testUser4);
 
         Route test4 = new Route("Beananidh Bheag",21.09,8.83,1352.00, "hard", 5, cairngorms);
         routeRepository.save(test4);
-        testUser3.addRoute(test4);
-        testUser4.addRoute(test4);
-        userRepository.save(testUser3);
-        userRepository.save(testUser4);
+        testUser1.addRoute(test4);
+        testUser2.addRoute(test4);
+        userRepository.save(testUser1);
+        userRepository.save(testUser2);
 
         Route test5 = new Route("Carn na Criche",17.1,6.8,835, "Roy Keane", 4, cairngorms);
         routeRepository.save(test5);
@@ -115,39 +115,39 @@ public class DataLoader implements ApplicationRunner {
 
         Route test6 = new Route("Carn Laith",13.5,5.03,772, "ice cream", 3, cairngorms);
         routeRepository.save(test6);
-        testUser3.addRoute(test6);
-        testUser4.addRoute(test6);
-        userRepository.save(testUser3);
-        userRepository.save(testUser4);
+        testUser5.addRoute(test6);
+        testUser6.addRoute(test6);
+        userRepository.save(testUser5);
+        userRepository.save(testUser6);
 
         Route test7 = new Route("Burn of Loinherry",5.3,2.12,405, "easy", 3, cairngorms);
         routeRepository.save(test7);
-        testUser3.addRoute(test7);
-        testUser4.addRoute(test7);
-        userRepository.save(testUser3);
-        userRepository.save(testUser4);
+        testUser5.addRoute(test7);
+        testUser6.addRoute(test7);
+//        userRepository.save(testUser5);
+//        userRepository.save(testUser6);
 
         Route test8 = new Route("Danger Zone",10.3,4.28,800, "Laaaaannnnaaa!", 5, cairngorms);
         routeRepository.save(test8);
-        testUser4.addRoute(test8);
-        userRepository.save(testUser4);
+        testUser1.addRoute(test8);
+//        userRepository.save(testUser1);
 
         Route test9 = new Route("Aviemore Loop",42.2,13.2,1495, "Why", 2, cairngorms);
         routeRepository.save(test9);
-        testUser3.addRoute(test9);
-        testUser4.addRoute(test9);
-        userRepository.save(testUser3);
-        userRepository.save(testUser4);
+        testUser5.addRoute(test9);
+        testUser6.addRoute(test9);
+//        userRepository.save(testUser5);
+//        userRepository.save(testUser6);
 
         Route test10 = new Route("K-B",58.21,24.05,3763.05, "EASAYYY!!!!", 5, cairngorms);
         routeRepository.save(test10);
         testUser5.addRoute(test10);
-        userRepository.save(testUser5);
+//        userRepository.save(testUser5);
 
         Route test11 = new Route("Lochinthrob",1.7,0.15,0, "Saucy", 1, cairngorms);
         routeRepository.save(test11);
         testUser6.addRoute(test11);
-        userRepository.save(testUser6);
+//        userRepository.save(testUser6);
 
 
 //        **COORDINATE CREATED**
