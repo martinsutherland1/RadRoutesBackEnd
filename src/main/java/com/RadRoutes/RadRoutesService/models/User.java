@@ -35,6 +35,9 @@ public class User {
     @Column(name = "distance_target")
     private double distanceTarget;
 
+    @Column(name = "total_distance")
+    private double totalDistance;
+
     @Column(name = "alias")
     private String alias;
 
@@ -58,6 +61,7 @@ public class User {
         this.distanceTarget = distanceTarget;
         this.alias = alias;
         this.allRoutes = new ArrayList<>();
+        this.totalDistance = 0.0;
     }
 
     public User() {
@@ -73,6 +77,14 @@ public class User {
 
     public List<Route> getAllRoutes() {
         return allRoutes;
+    }
+
+    public double getTotalDistance() {
+        return totalDistance;
+    }
+
+    public void setTotalDistance(double totalDistance) {
+        this.totalDistance += totalDistance;
     }
 
     public void setAllRoutes(List<Route> allRoutes) {
@@ -139,5 +151,17 @@ public class User {
 
     public void addRoute(Route route){
         this.allRoutes.add(route);
+        setTotalDistance(route.getDistance());
+    }
+
+    public double totalDistance(){
+        double total = 0;
+        for (int i = 0; i < allRoutes.size(); i++) {
+            total += getAllRoutes().get(i).getDistance();
+
+
+        }
+        return total;
+
     }
 }

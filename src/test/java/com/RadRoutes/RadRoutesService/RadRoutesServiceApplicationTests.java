@@ -114,6 +114,12 @@ class RadRoutesServiceApplicationTests {
 		assertEquals("Easy on the legs", foundUser.get(0).getAllRoutes().get(1).getRouteName());
 	}
 
+	@Test
+	public void totalDistance(){
+		List<User> foundUser = userRepository.findUserById(1L);
+		assertEquals(34.56, foundUser.get(0).totalDistance() );
+	}
+
 
 
 
