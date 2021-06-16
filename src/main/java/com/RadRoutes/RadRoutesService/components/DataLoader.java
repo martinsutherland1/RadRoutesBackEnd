@@ -67,13 +67,13 @@ public class DataLoader implements ApplicationRunner {
 //        // USER CREATED
         User testUser1 = new User("Martin", "Sutherland", 31, "martin@email.co.uk", "male", 100.00, "Tino");
         userRepository.save(testUser1);
-        User testUser2 = new User("Rab", "Nesbitt", 60, "RabCNesbitt@scotland.co.uk", "male", 10.00, "Rab C. Nesbitt");
+        User testUser2 = new User("Rab", "Nesbitt", 60, "RabCNesbitt@scotland.co.uk", "male", 6.00, "Rab C. Nesbitt");
         userRepository.save(testUser2);
-        User testUser3 = new User("Jack", "Jarvis", 72, "JJarvis@stillgame.co.uk", "male", 10.00, "Batman");
+        User testUser3 = new User("Jack", "Jarvis", 72, "JJarvis@stillgame.co.uk", "male", 100.00, "Batman");
         userRepository.save(testUser3);
-        User testUser4 = new User("Victor", "McDade", 75, "VMcDade@stillgame.co.uk", "male", 10.00, "Robin");
+        User testUser4 = new User("Victor", "McDade", 75, "VMcDade@stillgame.co.uk", "male", 100.00, "Robin");
         userRepository.save(testUser4);
-        User testUser5 = new User("Winston", "Ingram", 75, "BigWinston@stillgame.co.uk", "male", 10.00, "MAC-10");
+        User testUser5 = new User("Winston", "Ingram", 75, "BigWinston@stillgame.co.uk", "male", 16.00, "MAC-10");
         userRepository.save(testUser5);
         User testUser6 = new User("Isa", "Drennan", 75, "IsaDrennan@stillgame.co.uk", "female", 10.00, "Bottle-Specks");
         userRepository.save(testUser6);
